@@ -1,0 +1,916 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding:0;
+  font-family: Arial, sans-serif;
+  background-color: #0b0b16;
+  color: #eaeaf0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+/*<---The Below CSS Code is for All Section headings(h2)-->*/
+section {
+  padding: 80px 60px;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 60px 20px;
+  }
+}
+
+p {
+  color: #b5b5c3;
+  line-height: 1.6;
+}
+section h2 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+section h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #8a2be2, #ff2f92);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+section > p {
+  text-align: center;
+  max-width: 700px;
+  margin: 20px auto 0;
+}
+
+/*<---The Below CSS Code is for "Home section"---->*/
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 50px;
+}
+ .typewriter {
+  font-size: 22px;
+  font-weight: 600;
+  color: #ffffff;
+}
+.typewriter span {
+  color: #8a2be2;
+}
+.hero-text {
+  max-width: 600px;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+}
+
+.hero-text h2 {
+  font-size: 28px;
+  text-align: left;
+}
+
+.hero-text h2::after {
+  display: none;
+}
+
+.hero-text button {
+  margin-top: 20px;
+  padding: 14px 25px;
+  font-size: 19px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(90deg, #8a2be2, #ff2f92);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0px 2px 10px #8a2be2;
+}
+
+.profile-circle {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 2px 13px #8a2be2;
+  background: linear-gradient(
+    135deg,
+    rgba(138, 43, 226, 0.4),
+    rgba(255, 47, 146, 0.4)
+  );
+
+  padding: 6px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.profile-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+
+.profile-circle:hover {
+  transform: scale(1.05);
+  box-shadow:
+  0 0 30px rgba(138, 43, 226, 0.5),
+  0 0 60px rgba(255, 47, 146, 0.3);
+  cursor: pointer;
+}
+/*<---Media query of Home section for(mobile view)-->*/
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    margin-top: 100px;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-text h1 {
+    font-size: 34px;
+  }
+
+  .hero-text h2 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .profile-circle {
+    width: 260px;
+    height: 260px;
+    margin-bottom: 30px;
+  }
+}
+
+/*<---The Below CSS Code is for NavBar---->*/
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 16px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 1000;
+  background: transparent;
+  transition: background 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+.navbar-scrolled {
+  background: rgba(11, 11, 22, 0.8);
+  backdrop-filter: blur(1px);
+}
+
+.nav-logo {
+  font-size: 25px;
+  font-weight: bold;
+  margin-right: 50%;
+  color:#8a2be2;
+
+}
+
+.nav-links a {
+  margin-left:16px;
+  text-decoration: none;
+  color: #cfcfe6;
+  font-size: 20px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ff2f92;
+  cursor: pointer;
+}
+
+
+section {
+  padding: 60px;
+}
+.hamburger {
+  display: none;
+  font-size: 26px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/*<--Media query of Navbar with hamburger (MOBILE NAVBAR)--> */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background: rgba(11, 11, 22, 0.95);
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 30px 0;
+    display: none;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+/*<------The Below CSS Code is for "About section"------->*/
+h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+p {
+  max-width: 850px;
+  line-height: 1.6;
+  font-size: 20px;
+}
+.content-container{
+  max-width: 950px;
+  width: 100%;
+  margin: 30px auto 0;
+  padding: 20px;
+  border:none;
+  border-radius: 10px;
+  margin-top: 30px;
+  background: linear-gradient(
+  135deg,
+  rgba(17, 17, 34, 0.95),
+  rgba(24, 24, 48, 0.9)
+);
+  box-shadow:
+  0 10px 30px rgba(0, 0, 0, 0.6),
+  0 0 25px rgba(138, 43, 226, 0.25);
+  font-size: 18px;
+}
+.content-container:hover {
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.6),
+    0 0 40px rgba(138, 43, 226, 0.35);
+    cursor: pointer;
+}
+.about-item {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 18px;
+  align-items: flex-start;
+}
+
+.about-icon {
+  font-size: 30px;
+  color: #8a2be2;
+  margin-top: 4px;
+}
+
+.about-item p {
+  margin: 0;
+  color: #eaeaf0;
+}
+/*<--Media query of about section for mobile view-->*/
+@media (max-width: 768px) {
+  .content-container {
+    padding: 20px;
+    margin: 20px auto 0;
+  }
+
+  .about-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .about-icon {
+    font-size: 26px;
+    margin-top: 0;
+  }
+
+  .about-item p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+}
+
+
+/*<----The CSS code is for "Skill section"--------->*/
+#skills {
+  padding: 100px 60px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 38px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 30px;
+}
+
+.skills-card {
+  position: relative;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(17, 17, 34, 0.95),
+      rgba(24, 24, 48, 0.9)
+    ) padding-box,
+    linear-gradient(
+      135deg,
+      #8a2be2,
+      #ff2f92
+    ) border-box;
+
+  padding: 25px;
+  border-radius: 30px;
+  border: 1.5px solid transparent;
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.55),
+    0 0 30px rgba(138, 43, 226, 0.18);
+
+  margin-top: 30px;
+}
+.skills-card:hover {
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.6),
+    0 0 40px rgba(138, 43, 226, 0.35);
+    cursor: pointer;
+}
+
+.skills-card h3 {
+  color: #ffffff;
+  font-size: 22px;
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
+
+.skills-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.skill-pill {
+  display: flex;
+  align-items: center;
+  gap:10px;
+  padding: 15px 15px;
+  border-radius:50px;
+  font-size: 18px;
+  color: #eaeaf0;
+  font-weight: bold;
+  background: rgba(138, 43, 226, 0.12);
+  border: 2px solid rgba(138, 43, 226, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/*<--Media query of skill section for mobile view-->*/
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-pill {
+    font-size: 16px;
+    padding: 12px;
+  }
+}
+
+/*Icons of frontend with there logo color*/
+.skill-pill.html svg {
+  font-size: 23px;
+  color:#E34F26 ;
+}
+.skill-pill.css svg {
+  font-size: 23px;
+  color:#1572b6;
+}
+.skill-pill.js svg {
+  font-size: 23px;
+  color: #f7df1e;
+}
+.skill-pill.bootstrap svg {
+  font-size: 23px;
+  color:#7952b3;
+}
+.skill-pill.react svg {
+  font-size: 23px;
+  color:#61dafb;
+}
+/*Icons of BackEnd with there logo color*/
+.skill-pill.java svg {
+  font-size: 23px;
+  color:#f89820;
+}
+.skill-pill.springboot svg {
+  font-size: 23px;
+  color:#6db33f;
+}
+.skill-pill.mysql svg {
+  font-size: 23px;
+  color:#00758f;
+}
+.skill-pill.mongodb svg {
+  font-size: 23px;
+  color: #47a248;
+}
+/*Icons of cloud&devops with there logo color*/
+.skill-pill.aws svg {
+  font-size: 23px;
+  color: #ff9900;
+}
+.skill-pill.linux svg {
+  font-size: 23px;
+  color: #fcc624;
+}
+.skill-pill.docker svg {
+  font-size: 23px;
+  color:#2496ed;
+}
+.skill-pill.jenkins svg {
+  font-size: 23px;
+  color: #d24939;
+}
+.skill-pill.iac svg {
+  font-size: 23px;
+  color:#9b59b6;
+}
+/*Icons of tools with there logo color*/
+.skill-pill.git svg {
+  font-size: 23px;
+  color:#f05032;
+}
+.skill-pill.github svg {
+  font-size: 23px;
+  color:#ffffff;
+}
+.skill-pill.vscode svg {
+  font-size: 23px;
+  color:#007acc;
+}
+/* HOVER (SUBTLE) */
+.skill-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(138, 43, 226, 0.35);
+  cursor: pointer;
+}
+
+/*<---The below CSS Code is for "Experience section"------->*/
+.experience-container {
+  position: relative;
+  margin-top: 40px;
+  padding-left: 40px;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 10px;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background-color: #ccc;
+}
+.timeline-line {
+  background: linear-gradient(
+    to bottom,
+    #8a2be2,
+    rgba(138, 43, 226, 0.2)
+  );
+}
+
+.experience-card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.experience-card span {
+  color: #9fa0c3;
+  font-size: 14px;
+}
+.experience-card {
+  background: linear-gradient(
+    135deg,
+    rgba(17, 17, 34, 0.95),
+    rgba(24, 24, 48, 0.9)
+  );
+
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.55),
+    0 0 25px rgba(138, 43, 226, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.experience-card h3 {
+  color: #ffffff;
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+.experience-card h4 {
+  color: #cfcfe6;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.experience-card p {
+  color: #b5b5c3;
+  line-height: 1.6;
+  margin-top: 14px;
+}
+
+.skills-used {
+  margin-top: 10px;
+}
+
+.skills-used span {
+  display: inline-block;
+  padding: 4px 8px;
+  margin-right: 6px;
+  margin-top: 6px;
+  border-radius: 4px;
+  background-color: #eee;
+  font-size: 12px;
+}
+.skills-used span {
+  background: rgba(138, 43, 226, 0.15);
+  color: #e0d8ff;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 15px;
+  margin-right: 8px;
+  margin-top: 10px;
+  display: inline-block;
+  border: 1px solid rgba(138, 43, 226, 0.3);
+   box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.55),
+    0 0 25px rgba(138, 43, 226, 0.18);
+}
+/*<--Media query of Experience section for mobile view-->*/
+@media (max-width: 480px) {
+  .experience-container {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+  }
+
+  .timeline-line {
+    display: none !important;
+  }
+
+  .experience-card {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  .experience-card h3 {
+    font-size: 17px;
+    line-height: 1.3;
+    text-align: left;
+  }
+
+  .experience-card h4 {
+    font-size: 14px;
+  }
+
+  .experience-card p {
+    font-size: 14.5px;
+    line-height: 1.6;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .skills-used {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .skills-used span {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+}
+
+/*<----The below CSS code is for Projects section----->*/
+#projects {
+  padding: 50px 60px;
+  text-align: center;
+}
+
+ .projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.project-card {
+position: relative;
+background:
+  linear-gradient(
+      135deg,
+      rgba(17, 17, 34, 0.95),
+      rgba(24, 24, 48, 0.9)
+    ) padding-box,
+  linear-gradient(
+      135deg,
+      #8a2be2,
+      #ff2f92
+    ) border-box;
+  padding: 25px;
+  border-radius: 25px;
+  border: 1.5px solid transparent;
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.55),
+    0 0 25px rgba(138, 43, 226, 0.18);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.project-card:hover {
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.6),
+    0 0 45px rgba(138, 43, 226, 0.35);
+    cursor: pointer;
+}
+
+ .project-image {
+  height: 180px; 
+  border-radius: 10px;
+  background: rgba(138, 43, 226, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #cfcfe6;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill; 
+  border-radius: 10px;
+  transition: transform 0.4s ease;
+}
+.project-card h3 {
+  color: #ffffff;
+  margin-bottom: 10px; 
+  margin-top: 5px;
+}
+
+.project-card p {
+  color: #b5b5c3;
+  font-size: 16px;
+  line-height: 1.4;
+  margin-top: 10px;
+  margin-bottom: 16px;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.project-tech span {
+  background: rgba(138, 43, 226, 0.15);
+  color: #eaeaf0;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.project-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto; 
+}
+
+.project-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 15px 26px;
+  border-radius: 10px;
+  margin-top: 10px;
+  background: rgba(138, 43, 226, 0.3);
+  box-shadow: 0 0 10px rgba(138, 43, 226, 0.35);
+  font-weight: bold;
+  transition: 
+    transform 0.3s ease,
+    background 0.3s ease; 
+}
+.project-links a:hover {
+  transform: translateY(-3px);
+  background:linear-gradient(90deg, #8a2be2, #ff2f92);
+    cursor: pointer;
+}
+/*<--Media query of project section for mobile view-->*/
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-links {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+/*<---The CSS Code is for Contact section----->*/
+#contact {
+  padding: 100px 60px;
+  text-align: center;
+}
+
+.contact-container {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 650px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(17, 17, 34, 0.95),
+      rgba(24, 24, 48, 0.9)
+    ) padding-box,
+    linear-gradient(
+      135deg,
+      #8a2be2,
+      #ff2f92
+    ) border-box;
+
+  border: 1.5px solid transparent;
+  border-radius: 24px;
+  padding: 30px;
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.55),
+    0 0 30px rgba(138, 43, 226, 0.18);
+}
+
+.contact-form h3 {
+  color: #ffffff;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  margin-right: 25px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid #8a2be2;
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #b5b5c3;
+}
+
+.contact-btn {
+  width: 100%;
+  padding: 17px;
+  margin-top: 10px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #8a2be2, #ff2f92);
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(138, 43, 226, 0.6);
+}
+/*Media query of contact section for mobile view-->*/
+@media (max-width: 768px) {
+  .contact-form {
+    padding: 24px;
+  }
+
+  .form-group {
+    margin-right: 0;
+  }
+}
+
+/*<-----The Below CSS code is for Footer section */
+.footer {
+  margin-top: 10px;
+  width: 100%;
+  padding: 60px 20px 30px;
+  text-align: center;
+  background: radial-gradient(
+    circle at top,
+    rgba(138, 43, 226, 0.15),
+    transparent 60%
+  );
+}
+
+.footer-name {
+  color: #8a2be2;
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #cfcfe6;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ff2f92;
+  text-decoration: underline;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 26px;
+  margin-bottom: 25px;
+}
+
+.footer-socials a {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.footer-socials a:hover {
+  background: linear-gradient(135deg, #8a2be2, #ff2f92);
+  transform: translateY(-3px);
+}
+
