@@ -4,7 +4,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://prabhukorenor.github.io/my-portfolio",
+  "homepage": "https://prabhukorenor.github.io/My_Portfolio",
   "scripts": {
   "dev": "vite",
   "build": "vite build",
