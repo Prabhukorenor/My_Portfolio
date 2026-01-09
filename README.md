@@ -1,34 +1,9 @@
 # Personal Portfolio Website 🚀
-
 A modern, responsive personal portfolio website built using **React (Vite)**.  
 This project showcases my skills, experience, and projects with a clean UI and smooth navigation.
 
 ## 🔗 Live Demo
-👉 https://prabhukorenor.github.io/my-portfolio
-
-## 🛠️ Tech Stack
-- React (Vite)
-- JavaScript (ES6+)
-- HTML5
-- CSS3
-- React Router (HashRouter & HashLink)
-- GitHub Pages
-
-## ✨ Features
-- Fully responsive design (mobile, tablet & desktop)
-- Smooth scrolling navigation
-- Modern UI with clean animations
-- Skills, Experience & Projects sections
-- Contact section with social links
-
-## 📂 Project Structure
-# Personal Portfolio Website 🚀
-
-A modern, responsive personal portfolio website built using **React (Vite)**.  
-This project showcases my skills, experience, and projects with a clean UI and smooth navigation.
-
-## 🔗 Live Demo
-👉 https://prabhukorenor.github.io/my-portfolio
+👉https://prabhukorenor.github.io/My_Portfolio/
 
 ## 🛠️ Tech Stack
 - React (Vite)
