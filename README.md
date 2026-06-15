@@ -3,7 +3,7 @@ A modern, responsive personal portfolio website built using **React (Vite)**.
 This project showcases my skills, experience, and projects with a clean UI and smooth navigation.
 
 ## 🔗 Live Demo
-👉https://prabhukorenor.github.io/My_Portfolio/
+👉https://prabhu-korenor-portfolio.vercel.app
 
 ## 🛠️ Tech Stack
 - React (Vite)
